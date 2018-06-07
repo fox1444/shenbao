@@ -48,7 +48,6 @@ namespace QJY.API
         }
         #endregion
 
-
         #region 部门管理
 
 
@@ -572,7 +571,6 @@ namespace QJY.API
         }
         #endregion
 
-
         #region 角色管理
         public void EDITROLE(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
@@ -721,8 +719,6 @@ namespace QJY.API
         }
 
         #endregion
-
-
 
         #region 数据权限接口
 
@@ -984,14 +980,6 @@ namespace QJY.API
             }
         }
 
-
-
-
-
-
-
-
-
         #region 字典管理
         public void GETZIDIANLIST(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
@@ -1210,8 +1198,6 @@ namespace QJY.API
 
 
         #endregion
-
-
 
         #region excel转换为table
 
@@ -1601,7 +1587,7 @@ namespace QJY.API
                         HttpContext curContext = HttpContext.Current;
 
                         string strName = string.Empty;
-                   
+
 
                         // 设置编码和附件格式
                         curContext.Response.ContentType = "application/vnd.ms-excel";
@@ -2019,10 +2005,6 @@ namespace QJY.API
         }
         #endregion
 
-
-        
-
-
         #region  获取评论
         public void GETCOMENT(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
@@ -2142,6 +2124,7 @@ namespace QJY.API
         }
         #endregion
 
+        #region 上传文件
         /// <summary>
         /// 上传文件
         /// </summary>
@@ -2335,6 +2318,8 @@ namespace QJY.API
             msg.Result = customData;
 
         }
+        #endregion
+
         #region 设置部门人员的查看权限
         public void SETBRANCHQX(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
@@ -2347,6 +2332,7 @@ namespace QJY.API
 
         }
         #endregion
+
         #region 设置部门人员的查看角色
         public void SETROLEQX(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
@@ -2359,8 +2345,6 @@ namespace QJY.API
             msg.Result = role;
         }
         #endregion
-
-
 
         #region 获取已发送短信数及容量使用情况
         public void GETDXANDSPACE(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
@@ -2539,10 +2523,6 @@ namespace QJY.API
         }
         #endregion
 
-
-
-
-
         #region 人力资源列表
         /// <summary>
         /// 人力资源列表
@@ -2669,7 +2649,7 @@ namespace QJY.API
                 tt.CRTime = DateTime.Now;
                 new SZHL_DRAFTB().Insert(tt);
             }
-           
+
             msg.Result = tt;
         }
         public void DELDRAFT(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)

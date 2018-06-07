@@ -74,7 +74,6 @@ namespace QJY.WEB
                                     cid = UserInfo.ComId.Value;
                                     un = UserInfo.UserRealName;
                                 }
-
                             }
                         }
                         if (bl)
@@ -120,8 +119,6 @@ namespace QJY.WEB
                         }
                         #endregion
                     }
-
-
                 }
                 catch (Exception ex)
                 {
