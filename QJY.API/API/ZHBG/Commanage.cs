@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Web;
-using FastReflectionLib;
-using QJY.API;
+﻿using FastReflectionLib;
 using Newtonsoft.Json;
-using QJY.Data;
-using System.Data;
-using Newtonsoft.Json.Linq;
-using Senparc.Weixin.QY.Entities;
-using System.Net;
-using System.Configuration;
-using System.IO;
-using Senparc.Weixin.QY.CommonAPIs;
-using Senparc.Weixin.QY.AdvancedAPIs;
-using Senparc.Weixin.QY.AdvancedAPIs.OAuth2;
-using System.Xml;
-using System.Threading.Tasks;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
+using QJY.Data;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Web;
 using System.Web.SessionState;
 
 namespace QJY.API
@@ -33,7 +24,6 @@ namespace QJY.API
             methodInfo.FastInvoke(model, new object[] { context, msg, P1, P2, UserInfo });
         }
 
-
         #region 官网登录和注册
         /// <summary>
         /// 登录
@@ -45,14 +35,12 @@ namespace QJY.API
         /// <param name="UserInfo"></param>
         public void LOGIN(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
-
             string password = context.Request["password"] ?? "";
             string username = context.Request["UserName"] ?? "";
             string chkcode = context.Request["chkcode"] ?? "";
             msg.ErrorMsg = "";
             if (context.Session["chkcode"] != null)
             {
-
                 if (!chkcode.ToUpper().Equals(context.Session["chkcode"].ToString()))
                 {
                     msg.ErrorMsg = "验证码不正确";
@@ -64,7 +52,6 @@ namespace QJY.API
                 msg.ErrorMsg = "验证码已过期";
                 return;
             }
-
 
             JH_Auth_QY qyModel = new JH_Auth_QYB().GetALLEntities().First();
             password = CommonHelp.GetMD5(password);
@@ -94,12 +81,10 @@ namespace QJY.API
                 msg.Result1 = userInfo.UserName;
                 msg.Result4 = userInfo;
             }
-
-
         }
 
         /// <summary>
-        /// 注册
+        /// 注册新用户
         /// </summary>
         /// <param name="context"></param>
         /// <param name="msg"></param>
@@ -167,11 +152,8 @@ namespace QJY.API
             }
         }
 
-
-
         public void REGISTERYSOLD(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
-
             JH_Auth_QY QY = new JH_Auth_QYB().GetEntity(d => d.ComId == 10334);
             QY.CRDate = DateTime.Now.AddYears(-2);
             QY.QYProfile = QY.FileServerUrl;
@@ -184,7 +166,6 @@ namespace QJY.API
 
         public void REGISTERYS(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
-
             string strXM = P2;
             string strPhone = P1;
             JH_Auth_User user1 = new JH_Auth_UserB().GetUserByUserName(10334, P1);
@@ -280,10 +261,7 @@ namespace QJY.API
                 }
             }
         }
-
-
         #endregion
-
 
         #region 评论
 
@@ -317,8 +295,6 @@ namespace QJY.API
             }
         }
         #endregion
-
-
 
         #region 找回密码
         public void CHECKPHONE(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
@@ -396,7 +372,6 @@ namespace QJY.API
             //}
         }
         #endregion
-
 
         #region 分享查看文档操作
         /// <summary>
@@ -608,15 +583,9 @@ namespace QJY.API
         }
         #endregion
 
-
         /// <summary>
         /// 根据ID查询工资明细
         /// </summary>
-        /// <param name="context"></param>
-        /// <param name="msg"></param>
-        /// <param name="P1"></param>
-        /// <param name="P2"></param>
-        /// <param name="UserInfo"></param>
         public void GETGZDLIST(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
             int ID;

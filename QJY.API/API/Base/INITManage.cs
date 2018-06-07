@@ -63,6 +63,7 @@ namespace QJY.API
 
         }
         #endregion
+
         #region 常用菜单设置
         public void GETMOBILETJDATA(HttpContext context, Msg_Result msg, string P1, string P2, JH_Auth_UserB.UserInfo UserInfo)
         {
