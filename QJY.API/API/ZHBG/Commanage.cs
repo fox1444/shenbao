@@ -39,6 +39,22 @@ namespace QJY.API
             string username = context.Request["UserName"] ?? "";
             string chkcode = context.Request["chkcode"] ?? "";
             msg.ErrorMsg = "";
+
+            if (username.Trim().Length == 0)
+            {
+                msg.ErrorMsg = "请输入用户名";
+                return;
+            }
+            if (password.Trim().Length == 0)
+            {
+                msg.ErrorMsg = "请输入密码";
+                return;
+            }
+            if (chkcode.Trim().Length == 0)
+            {
+                msg.ErrorMsg = "请输入验证码";
+                return;
+            }
             if (context.Session["chkcode"] != null)
             {
                 if (!chkcode.ToUpper().Equals(context.Session["chkcode"].ToString()))

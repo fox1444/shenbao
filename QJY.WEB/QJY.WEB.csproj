@@ -113,6 +113,9 @@
     <Content Include="Global.asax" />
     <Content Include="API\VIEWAPI.ashx" />
     <Content Include="API\WXAPI.ashx" />
+    <Content Include="SPWeb\CSS\sp.css" />
+    <Content Include="SPWeb\Corporation\login.html" />
+    <Content Include="SPWeb\Corporation\protocol.html" />
     <Content Include="ToolS\DownFile.aspx" />
     <Content Include="ToolS\HtmlToWord.aspx" />
     <Content Include="ToolS\JS\echarts.common.min.js" />
@@ -1600,6 +1603,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="SPWeb\Expert\" />
     <Folder Include="ViewV5\upload\" />
   </ItemGroup>
   <ItemGroup>

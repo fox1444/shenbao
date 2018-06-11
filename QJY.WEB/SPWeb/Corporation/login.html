@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="”renderer”" content="”webkit|ie-comp|ie-stand”" />
-    <title>申报管理系统</title>
+    <title>申报单位入口</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<meta content="width=device-width, initial-scale=1.0" name="viewport">-->
     <meta content="" name="description">
@@ -14,95 +14,84 @@
     <link href="/ViewV5/web/login/components.css" id="style_components" rel="stylesheet" type="text/css">
     <link href="/ViewV5/web/login/css.css" rel="stylesheet" type="text/css">
     <link href="/ViewV5/web/login/index.css" rel="stylesheet" type="text/css">
+    <link href="/spweb/css/sp.css" rel="stylesheet" type="text/css">
     <style>
-        .container {
-            text-align: center;
-            font-family: STSong;
-            font-size: 29px;
-            line-height: 36px;
-            letter-spacing: 5px;
-            font-weight: bold;
-            text-shadow: 4px 4px 1px #ccc;
-        }
-
         .login-hu {
             margin: 0 auto;
         }
-        #register-btn{
-            float:left;
+
+        #register-btn {
+            float: left;
         }
     </style>
 </head>
 <body onkeypress="jptj(event)" style="height: 100%;">
     <div class="login_nav">
-        <div class="container pad">
+        <div class="logo_head">
             <span>四川省凉山州科技项目申报管理系统</span>
         </div>
     </div>
-    <div class="menu-toggler sidebar-toggler">
-    </div>
 
-    <div>
-        <div class="con-box" style="background-color: #43c1ef;">
-            <link href="login/ie9tips.css" rel="stylesheet" type="text/css">
-            <div id="ie9-tips" class="clearfix" style="display: none;">
-                <div id="tipsPanel">
-                    <div id="tipsDesc">系统检测到您所使用的浏览器版本较低，推荐使用ie9及以上版本浏览器，或<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>或<a href="http://rj.baidu.com/soft/detail/14744.html" target="_blank">Chrome</a>浏览器打开，否则将无法体验完整功能。</div>
-                    <a id="stopSuggestA" href="javascript:;">×</a>
-                </div>
+    <div class="con-box" style="background-color: #43c1ef;">
+        <link href="login/ie9tips.css" rel="stylesheet" type="text/css">
+        <div id="ie9-tips" class="clearfix" style="display: none;">
+            <div id="tipsPanel">
+                <div id="tipsDesc">系统检测到您所使用的浏览器版本较低，推荐使用ie9及以上版本浏览器，或<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>或<a href="http://rj.baidu.com/soft/detail/14744.html" target="_blank">Chrome</a>浏览器打开，否则将无法体验完整功能。</div>
+                <a id="stopSuggestA" href="javascript:;">×</a>
             </div>
-            <div class="con-box-con pad">
-                <div class="login-hu">
-                    <ul class="caidan clear">
-                        <li class="fl li-active" style="width:100%">
-                            账户登录
+        </div>
+        <div class="con-box-con pad">
+            <div class="login-hu">
+                <ul class="caidan clear">
+                    <li class="fl li-active" style="width:100%">
+                        申报单位登录
+                    </li>
+                </ul>
+                <div class="con">
+                    <ul class="tabCon1">
+                        <li>
+                            <p class="login-p">
+                                <img src="/ViewV5/web/login/ueser.png" width="13" height="15" class="user-img">
+                                <input class="yx youxiang-no" type="text" autocomplete="off" placeholder="请输入用户名" id="username" name="username">
+                            </p>
+                            <span class="help-block" for="username" style="color: red;"></span>
+                            <p class="login-p2">
+                                <img src="/ViewV5/web/login/lock.png" width="13" height="15" class="user-img">
+                                <input class="youxiang-no mm" type="password" autocomplete="off" placeholder="请输入密码" id="password" name="password">
+                            </p>
+                            <p class="login-p2">
+                                <input class="youxiang-no mm" type="text" autocomplete="off" placeholder="请输入验证码" style="width: 60%" id="chkcode" name="chkcode">
+                                <label style="float: right; width: 30%; height: 100%;">
+                                    <img src="/Tools/YZMCode.aspx" style="width: 100%; height: 100%; padding: 1px;" onclick="changecode(this)">
+                                </label>
+                            </p>
+                            <span class="help-block" for="password" style="color: red;"></span>
+
+                            <p class="login-end" style="margin-top: 30px;">
+                                <a class="uppercase">登录</a>
+                            </p>
+                            <div class="alert alert-danger msgcom" style="margin-top: 10px; margin-bottom: 0; padding: 5px; display: none">
+                                <button class="close" data-close="alert"></button>
+                                <span id="m_info"></span>
+                            </div>
+                            <div class="create-account login-check" style="margin-top: 20px;">
+                                <a href="register.html" id="register-btn">用户注册</a>
+                                <a href="find-cold.html?type=1" class="fr findpass">忘记密码？</a>
+                            </div>
                         </li>
                     </ul>
-                    <div class="con">
-                        <ul class="tabCon1">
-                            <li>
-                                <p class="login-p">
-                                    <img src="/ViewV5/web/login/ueser.png" width="13" height="15" class="user-img">
-                                    <input class="yx youxiang-no" type="text" autocomplete="off" placeholder="请输入用户名" id="username" name="username">
-                                </p>
-                                <span class="help-block" for="username" style="color: red;"></span>
-                                <p class="login-p2">
-                                    <img src="/ViewV5/web/login/lock.png" width="13" height="15" class="user-img">
-                                    <input class="youxiang-no mm" type="password" autocomplete="off" placeholder="请输入密码" id="password" name="password">
-                                </p>
-                                <p class="login-p2">
-                                    <input class="youxiang-no mm" type="text" autocomplete="off" placeholder="请输入验证码" style="width: 60%" id="chkcode" name="chkcode">
-                                    <label style="float: right; width: 30%; height: 100%;">
-                                        <img src="/Tools/YZMCode.aspx" style="width: 100%; height: 100%; padding: 1px;" onclick="changecode(this)">
-                                    </label>
-                                </p>
-                                <span class="help-block" for="password" style="color: red;"></span>
-                            
-                                <p class="login-end" style="margin-top: 30px;">
-                                    <a class="uppercase">登录</a>
-                                </p>
-                                <div class="alert alert-danger msgcom" style="margin-top: 10px; margin-bottom: 0; padding: 5px; display: none">
-                                    <button class="close" data-close="alert"></button>
-                                    <span id="m_info"></span>
-                                </div>
-                                <!--<div class="create-account login-check" style="margin-top: 20px;">
-                                    <a href="###" id="register-btn">用户注册</a>
-                                    <a href="find-cold.html?type=1" class="fr findpass">忘记密码？</a>                                   
-                                </div>-->
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-login">
-            <p>服务热线：0834-3227827 028-85249950</p>
-            <p> Copyright @ 版权所有：凉山州烟草专卖局 开发维护：联购科技有限公司</p>
-        </div>
-        <script src="/ViewV5/web/js/jquery-1.9.1.min.js"></script>
-        <script src="/ViewV5/web/login/bootstrap.min.js"></script>
-        <script src="/ViewV5/web/js/layer/layer.js"></script>
-        <script type="text/javascript">
+    </div>
+    <div class="footer-login">
+        <p>服务热线：0834-3227827 028-85249950</p>
+        <p> Copyright @ 版权所有：凉山州烟草专卖局 开发维护：联购科技有限公司</p>
+    </div>
+    <script src="/ViewV5/web/js/jquery-1.9.1.min.js"></script>
+    <script src="/ViewV5/web/login/bootstrap.min.js"></script>
+    <script src="/ViewV5/web/js/layer/layer.js"></script>
+    <script type="text/javascript">
             $.ajaxSettings.async = false;
             var ComID = "";
             var SelTypeId = 0;
@@ -142,8 +131,8 @@
                 exp.setTime(exp.getTime() + 24 * 60 * 60 * 1000);
                 document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
             }
-        </script>
-        <script>
+    </script>
+    <script>
             (function () {
                 $('.yx').on({
                     focus: function () {
@@ -170,8 +159,8 @@
                     }
                 })
             })();
-        </script>
-        <script language="javascript">
+    </script>
+    <script language="javascript">
             var isIE6 = !!navigator.userAgent.match(/MSIE 6.0/),
                 isIE7 = !!navigator.userAgent.match(/MSIE 7.0/),
                 isIE8 = !!navigator.userAgent.match(/MSIE 8.0/),
@@ -191,8 +180,8 @@
                     $('#ie9-tips').hide();
                 }
             })
-        </script>
-        <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
             $(function () {
                 $(".caidan li").each(function (i) {
                     $(this).click(function () {
@@ -201,7 +190,6 @@
                     });
                 });
             });
-        </script>
-    </div>
+    </script>
 </body>
 </html>

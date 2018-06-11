@@ -1,0 +1,9 @@
+﻿.logo_head {
+    text-align: center;
+    font-family: STSong;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 4px 4px 1px #ccc;
+}
