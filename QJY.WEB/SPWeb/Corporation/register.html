@@ -22,7 +22,7 @@
         <div class="ptitle subtitle">
             2.填写帐号基本信息。请在以下表单中设置您的帐号信息以及密码安全信息，确认后点击“注册”完成单位注册。
         </div>
-        <form id="defaultForm" method="post" class="form-horizontal">
+        <div id="defaultForm" class="form-horizontal">
             <div class="pbody">
                 <div class="subtitle">
                     帐号基本信息(此信息用于您登陆本系统，请认真填写，并牢记)
@@ -52,14 +52,20 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">用户名：</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="userName" />
+                            <input type="text" class="form-control" name="username" />
                         </div><i>*</i> (由4-16位数字或英文字母组成)
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">密码：</label>
                         <div class="col-lg-3">
-                            <input type="text" class="form-control" name="passWord" />
+                            <input type="password" class="form-control" name="password" />
                         </div><i>*</i> (由4-16位数字或英文字母组成)
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">确认密码：</label>
+                        <div class="col-lg-3">
+                            <input type="password" class="form-control" name="confirmPassword" />
+                        </div><i>*</i> (请再次输入密码)
                     </div>
                 </div>
 
@@ -318,7 +324,7 @@
             <div class="pfoot">
                 <button type="submit" id="validateBtn">注 册</button><button onclick="javascript:location.href='/SPWeb/index.html'">重设表单</button>
             </div>
-        </form>
+        </div>
     </div>
     
     <script type="text/javascript">
@@ -331,16 +337,16 @@
                     validating: 'glyphicon glyphicon-refresh'
                 },
                 fields: {
-                    userName: {
-                        message: '内容必须填写',
+                    username: {
+                        message: '用户名必须填写',
                         validators: {
                             notEmpty: {
-                                message: '内容必须填写'
+                                message: '用户名必须填写'
                             },
                             stringLength: {
                                 min: 4,
                                 max: 16,
-                                message: '用户名为4-16位'
+                                message: '用户名长度为4-16位'
                             },
                             regexp: {
                                 regexp: /^[a-zA-Z0-9_\.]+$/,
@@ -351,7 +357,46 @@
                                 message: '用户名和密码不能相同'
                             }
                         }
-                    }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: '密码必须填写'
+                            },
+                            identical: {
+                                field: 'confirmPassword',
+                                message: '两次输入密码必须一致'
+                            },
+                            stringLength: {
+                                min: 4,
+                                max: 16,
+                                message: '密码长度为4-16位'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                message: '密码为字母和数字'
+                            },
+                            different: {
+                                field: 'username',
+                                message: '用户名和密码不能相同'
+                            }
+                        }
+                    },
+                    confirmPassword: {
+                        validators: {
+                            notEmpty: {
+                                message: '确认密码必须填写'
+                            },
+                            identical: {
+                                field: 'password',
+                                message: '两次输入密码必须一致'
+                            },
+                            different: {
+                                field: 'username',
+                                message: '用户名和密码不能相同'
+                            }
+                        }
+                    },
                 }
             });
             $('#validateBtn').click(function () {
