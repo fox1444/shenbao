@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>申报单位注册</title>
+    <link href="/ViewV5/web/login/css.css" rel="stylesheet" type="text/css">
+    <link href="/ViewV5/web/login/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/spweb/css/bootstrap.css" />
+    <link rel="stylesheet" href="/spweb/css/bootstrapValidator.css" />
+    <link href="/spweb/css/sp.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/SPWeb/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/SPWeb/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/SPWeb/js/bootstrapValidator.js"></script>
+</head>
+<body>
+    <div class="login_nav">
+        <div class="logo_head">
+            <span>四川省凉山州科技项目申报管理系统</span>
+        </div>
+    </div>
+    <div class="protocol_con">
+        <div class="ptitle subtitle">
+            2.填写帐号基本信息。请在以下表单中设置您的帐号信息以及密码安全信息，确认后点击“注册”完成单位注册。
+        </div>
+        <form id="defaultForm" method="post" class="form-horizontal">
+            <div class="pbody">
+                <div class="subtitle">
+                    帐号基本信息(此信息用于您登陆本系统，请认真填写，并牢记)
+                </div>
+                <div class="subcontent">
+                    <!--<ul>
+        <li>
+            用户名：
+        </li>
+        <li class="form-group">
+            <div class="col-lg-5"><input type="text" class="form-control" name="userName" /></div><i>*</i> (由4-16位数字或英文字母组成)
+        </li>
+        <li>
+            密码：
+        </li>
+        <li>
+            <input type="password" /><i>*</i>
+        </li>
+        <li>
+            确认密码：
+        </li>
+        <li>
+            <input type="password" /><i>*</i> (请再次输入密码)
+        </li>
+    </ul>-->
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">用户名：</label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control" name="userName" />
+                        </div><i>*</i> (由4-16位数字或英文字母组成)
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">密码：</label>
+                        <div class="col-lg-3">
+                            <input type="text" class="form-control" name="passWord" />
+                        </div><i>*</i> (由4-16位数字或英文字母组成)
+                    </div>
+                </div>
+
+                <div class="subtitle">
+                    密码安全(“密码安全”用于帐号被盗或密码遗失情况下找回密码，请牢记自己问题及答案)
+                </div>
+                <div class="subcontent">
+                    <ul>
+                        <li>
+                            密码提示问题1：
+                        </li>
+                        <li>
+                            <select>
+                                <option value="1">您的小学班主任名字</option>
+                            </select><i>*</i>
+                        </li>
+                        <li>
+                            答案1：
+                        </li>
+                        <li>
+                            <input /><i>*</i>
+                        </li>
+                        <li>
+                            密码提示问题2：
+                        </li>
+                        <li>
+                            <select>
+                                <option value="1">您的小学班主任名字</option>
+                            </select><i>*</i>
+                        </li>
+                        <li>
+                            答案1：
+                        </li>
+                        <li>
+                            <input /><i>*</i>
+                        </li>
+                        <li>
+                            找回密码邮箱：
+                        </li>
+                        <li>
+                            <input type="password" />
+                            <div class="long-tention">
+                                <i>*</i> (请键入您常使用的电子邮件地址用于接收"密码找回"、"密码申诉"等回复的邮件)
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="subtitle">
+                    单位详细信息(说明:标有<i>*</i> 必须填写)
+                </div>
+                <div class="subcontent">
+                    <ul>
+                        <li>
+                            所属归口：
+                        </li>
+                        <li>
+                            <select class="width150">
+                                <option value="0">-请选择归口类别-</option>
+                                <option value="1">州科技局</option>
+                                <option value="2">县市科技局</option>
+                            </select>
+                            <select class="width250">
+                                <option value="0">-请选择归口科技局-</option>
+                                <option value="1">州科技局</option>
+                                <option value="2">县市科技局</option>
+                            </select><i>*</i>
+                        </li>
+                        <li>
+                            单位性质：
+                        </li>
+                        <li>
+                            <select class="width150">
+                                <option value="">-请选择单位性质-</option>
+                                <option value="大专院校">大专院校</option>
+                                <option value="科研院所">科研院所</option>
+                                <option value="群众团体">群众团体</option>
+                                <option value="国有企业">国有企业</option>
+                                <option value="民营企业">民营企业</option>
+                                <option value="外资企业">外资企业</option>
+                                <option value="其他机构">其他机构</option>
+                            </select><i>*</i>
+                        </li>
+                        <li>
+                            单位名称：
+                        </li>
+                        <li>
+                            <input /><i>*</i>（必须为公司注册全称）
+                        </li>
+                        <li>
+                            组织机构代码：
+                        </li>
+                        <li>
+                            <input /><i>*</i>（格式：XXXXXXXX-X）
+                        </li>
+                        <li>
+                            开户银行：
+                        </li>
+                        <li>
+                            <input /><i>*</i>（例如：中国人民银行）
+                        </li>
+                        <li>
+                            银行帐号：
+                        </li>
+                        <li>
+                            <input /><i>*</i>（只能输入数字）
+                        </li>
+                        <li>
+                            法人代表姓名：
+                        </li>
+                        <li>
+                            <input /><i>*</i>
+                        </li>
+                        <li>
+                            法人代表电话：
+                        </li>
+                        <li>
+                            <input /><i>*</i>（只能输入数字和'-'号）
+                        </li>
+                        <li>
+                            单位地址：
+                        </li>
+                        <li>
+                            <input /><i>*</i>
+                        </li>
+                        <li>
+                            邮政编码：
+                        </li>
+                        <li>
+                            <input /><i>*</i>
+                        </li>
+                        <li>单位网页地址： </li>
+                        <li>
+                            <input value="http://" />
+                        </li>
+                        <li>
+                            单位简介：<br />
+                            （限1000字以内）
+                        </li>
+                        <li>
+                            <textarea></textarea><i style="float:right;">*</i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="subtitle">
+                    资金情况<i>（单位：万元）</i>
+                </div>
+                <div class="subcontent">
+                    <ul>
+                        <li>
+                            资 产 总  额：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            固定资产原值：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            固定资产净值：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            流 动 资  产：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            负 债 总  额：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            其中流动负债：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            销售收入总额：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            主营业务收入：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            税后利润总额：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                        <li>
+                            所有者权益总额：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="subtitle">
+                    联系人信息（申报单位科技处审核人员）
+                </div>
+                <div class="subcontent">
+                    <ul>
+                        <li>
+                            姓名：
+                        </li>
+                        <li>
+                            <input type="text" /><i>*</i>
+                        </li>
+                        <li>
+                            固定电话：
+                        </li>
+                        <li>
+                            <input type="text" /><i>*</i> （只能输入数字和'-'号）
+                        </li>
+                        <li>
+                            移动电话：
+                        </li>
+                        <li>
+                            <input type="text" /><i>*</i> （请认真填写，方便联系）
+                        </li>
+                        <li>
+                            电子邮箱：
+                        </li>
+                        <li>
+                            <input type="text" /><i>*</i>
+                        </li>
+                        <li>
+                            传    真：
+                        </li>
+                        <li>
+                            <input type="text" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="subtitle">
+                    验证码
+                </div>
+            </div>
+            <div class="pfoot">
+                <button type="submit" id="validateBtn">注 册</button><button onclick="javascript:location.href='/SPWeb/index.html'">重设表单</button>
+            </div>
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#defaultForm').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    userName: {
+                        message: '内容必须填写',
+                        validators: {
+                            notEmpty: {
+                                message: '内容必须填写'
+                            },
+                            stringLength: {
+                                min: 4,
+                                max: 16,
+                                message: '用户名为4-16位'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_\.]+$/,
+                                message: '用户名为字母和数字'
+                            },
+                            different: {
+                                field: 'password',
+                                message: '用户名和密码不能相同'
+                            }
+                        }
+                    }
+                }
+            });
+            $('#validateBtn').click(function () {
+                $('#defaultForm').bootstrapValidator('validate');
+            });
+        })
+    </script>
+</body>
+</html>

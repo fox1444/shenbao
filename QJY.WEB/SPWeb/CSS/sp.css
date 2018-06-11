@@ -1,6 +1,24 @@
-﻿body{
-    color:#000;
+﻿body {
+    color: #000;
+    font-size: 14px;
 }
+
+i {
+    color: red;
+}
+
+.width100 {
+    width: 100px !important;
+}
+
+.width150 {
+    width: 150px !important;
+}
+
+.width250 {
+    width: 250px !important;
+}
+
 .logo_head {
     text-align: center;
     font-family: STSong;
@@ -10,35 +28,105 @@
     font-weight: bold;
     text-shadow: 4px 4px 1px #ccc;
 }
+
 .protocol_con {
     border: solid 1px #AAE1FF;
     width: 700px;
-    margin: 30px auto;
+    margin: 20px auto;
 }
+
     .protocol_con .ptitle {
+        background: url('/spweb/images/navb.jpg') repeat-x left top #e5f7fb;
+    }
+
+    .protocol_con .pbody .description {
+        padding: 2px;
+    }
+
+    .protocol_con .pbody textarea {
+        border: solid 1px #ccc;
+        width: 100%;
+        padding: 4px 6px;
+        font-size: 15px;
+    }
+
+    .protocol_con .subtitle {
         font-weight: bold;
         font-size: 14px;
         padding: 6px 5px;
         border-bottom: solid 1px #AAE1FF;
+        clear: both;
+    }
+    .protocol_con .subcontent{
+        padding-top:10px;
+    }
+    .protocol_con .subcontent li:nth-of-type(odd) {
+        clear: both;
+        float: left;
+        width: 200px;
+        text-align: right;
+        margin: 3px 2px;
     }
 
-    .protocol_con .pbody {
-        padding: 2px;
+    .protocol_con .subcontent li:nth-of-type(even) {
+        float: left;
+        margin: 3px 2px;
     }
-        .protocol_con .pbody textarea {
-            border: solid 1px #ccc;
-            width:100%;
-            padding:4px 6px;
-            font-size:15px;
-        }
-    .protocol_con .pfoot {
-        padding: 10px 5px;
-        text-align: center;
+
+    .protocol_con .subcontent input, .protocol_con .subcontent select {
+        border: solid 1px #333;
+        font-size: 14px;
+        height: 25px;
+        margin: 0;
     }
-        .protocol_con .pfoot button {
-            border: solid 1px #666;
-            border-radius:10px;
-            margin:0 10px;
-            font-size:14px;
-            padding:4px 15px;
-        } 
+
+.protocol_con .subcontent li textarea {
+    border: solid 1px #333;
+    width: 450px;
+    font-size: 14px;
+    height: 120px;
+}
+
+.protocol_con .subcontent .long-tention {
+    float: right;
+    width: 310px;
+}
+
+.protocol_con .pfoot {
+    padding: 10px 5px;
+    text-align: center;
+}
+
+    .protocol_con .pfoot button {
+        border: solid 1px #666;
+        border-radius: 10px;
+        margin: 0 10px;
+        font-size: 14px;
+        padding: 6px 20px;
+    }
+label {
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+.form-control {
+    border-radius: 0;
+    padding: 6px 3px;
+}
+
+.form-horizontal .has-feedback .form-control-feedback {
+    top: -4px;
+    right: 10px;
+}
+
+.has-feedback .form-control {
+    padding-right: 20px;
+}
+
+.control-label {
+    padding: 0 !important;
+    line-height: 25px;
+}

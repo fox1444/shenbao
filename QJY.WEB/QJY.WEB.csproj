@@ -113,9 +113,19 @@
     <Content Include="Global.asax" />
     <Content Include="API\VIEWAPI.ashx" />
     <Content Include="API\WXAPI.ashx" />
+    <Content Include="SPWeb\Corporation\register.html" />
+    <Content Include="SPWeb\CSS\bootstrapValidator.css" />
     <Content Include="SPWeb\CSS\sp.css" />
     <Content Include="SPWeb\Corporation\login.html" />
     <Content Include="SPWeb\Corporation\protocol.html" />
+    <Content Include="SPWeb\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="SPWeb\images\navb.jpg" />
+    <Content Include="SPWeb\CSS\bootstrap.css" />
+    <Content Include="SPWeb\JS\bootstrap.min.js" />
+    <Content Include="SPWeb\JS\bootstrapValidator.js" />
+    <Content Include="SPWeb\JS\bootstrapValidator.min.js" />
+    <Content Include="SPWeb\JS\jquery-1.10.2.min.js" />
+    <Content Include="SPWeb\JS\zh_CN.js" />
     <Content Include="ToolS\DownFile.aspx" />
     <Content Include="ToolS\HtmlToWord.aspx" />
     <Content Include="ToolS\JS\echarts.common.min.js" />
@@ -1595,6 +1605,9 @@
     <Content Include="ToolS\umeditor122\net\getContent.ashx" />
     <Content Include="ToolS\umeditor122\net\imageUp.ashx" />
     <Content Include="ToolS\UploadTX.ashx" />
+    <Content Include="SPWeb\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="SPWeb\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="SPWeb\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
