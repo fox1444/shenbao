@@ -1,4 +1,7 @@
-﻿.logo_head {
+﻿body{
+    color:#000;
+}
+.logo_head {
     text-align: center;
     font-family: STSong;
     font-size: 30px;
@@ -7,3 +10,35 @@
     font-weight: bold;
     text-shadow: 4px 4px 1px #ccc;
 }
+.protocol_con {
+    border: solid 1px #AAE1FF;
+    width: 700px;
+    margin: 30px auto;
+}
+    .protocol_con .ptitle {
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 5px;
+        border-bottom: solid 1px #AAE1FF;
+    }
+
+    .protocol_con .pbody {
+        padding: 2px;
+    }
+        .protocol_con .pbody textarea {
+            border: solid 1px #ccc;
+            width:100%;
+            padding:4px 6px;
+            font-size:15px;
+        }
+    .protocol_con .pfoot {
+        padding: 10px 5px;
+        text-align: center;
+    }
+        .protocol_con .pfoot button {
+            border: solid 1px #666;
+            border-radius:10px;
+            margin:0 10px;
+            font-size:14px;
+            padding:4px 15px;
+        } 
