@@ -124,7 +124,6 @@
     <Content Include="SPWeb\JS\bootstrap.min.js" />
     <Content Include="SPWeb\JS\bootstrapValidator.js" />
     <Content Include="SPWeb\JS\bootstrapValidator.min.js" />
-    <Content Include="SPWeb\JS\jquery-1.10.2.min.js" />
     <Content Include="SPWeb\JS\zh_CN.js" />
     <Content Include="ToolS\DownFile.aspx" />
     <Content Include="ToolS\HtmlToWord.aspx" />
